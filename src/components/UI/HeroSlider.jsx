@@ -26,7 +26,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Kalo bisa Rental Mobil, Ngapain Beli !</h1>
 
             <button className="btn reserve__btn mt-4">
-            <Link to="/cars">Rental Disini</Link>
+            <Link to="/cars">Edit Disini</Link>
             </button>
           </div>
         </Container>
@@ -39,7 +39,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Kalo bisa Rental Mobil, Ngapain Beli !</h1>
 
             <button className="btn reserve__btn mt-4">
-            <Link to="/cars">Rental Disini</Link>
+            <Link to="/cars">Edit Disini</Link>
             </button>
           </div>
         </Container>
@@ -52,7 +52,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Kalo bisa Rental Mobil, Ngapain Beli !</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/cars">Rental Disini</Link>
+              <Link to="/cars">Edit Disini</Link>
             </button>
           </div>
         </Container>

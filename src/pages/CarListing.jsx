@@ -1,11 +1,22 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import CarItem from "../components/UI/CarItem";
-import carData from "../assets/data/carData";
+import { useState,useEffect } from "react";
+import "../styles/blog-item.css"
+
 
 const CarListing = () => {
+  const [cars,setCars] = useState([]);
+  
+  useEffect(() => {
+    fetch("http://localhost:8000/list-rental")
+    .then(response =>  response.json())
+    .then(cars => setCars(cars))
+  },[])
+
   return (
     <Helmet title="Cars">
       <CommonSection title="List Mobil" />
@@ -13,23 +24,17 @@ const CarListing = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="12">
-              <div className=" d-flex align-items-center gap-3 mb-5">
-                <span className=" d-flex align-items-center gap-2">
-                  <i class="ri-sort-asc"></i> Urutkan
-                </span>
-
-                <select>
-                  <option>Select</option>
-                  <option value="murah">Termurah</option>
-                  <option value="mahal">Termahal</option>
-                </select>
-              </div>
+            <Col>
+            <h1>List Mobil</h1>
             </Col>
-
-            {carData.map((item) => (
-              <CarItem item={item} key={item.id} />
-            ))}
+            <Col className="colom" >
+              <Link to={`/cars/add`} className="link">Tambah</Link>
+            </Col>
+          </Row>
+          <Row>
+          {cars.map((product) => (
+                <CarItem item={product} key={product.id_user} />
+          ))}
           </Row>
         </Container>
       </section>

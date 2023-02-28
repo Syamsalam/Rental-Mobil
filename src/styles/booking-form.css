@@ -1,20 +1,27 @@
-.booking__form {
-  width: 47.5%;
-}
-
-.booking__form input {
-  padding: 8px 15px;
-  border: 1px solid #7c8a972a;
-  color: #7c8a97;
+.booking_form {
   width: 100%;
+  padding: 30px 0px;
+  text-align: center;
 }
 
-.booking__form select,
-.textarea {
+.booking_form label {
+  padding: 8px;
+  color: blue;
+  width: 30%;
+}
+
+.booking_form input {
+  padding-top: 15px;
+  border: 1px solid #0000002a;
+  color: #000000;
+  width: 70%;
+}
+
+.booking_form .submit {
   width: 100%;
   padding: 10px 15px;
-  color: #7c8a97;
-  border: 1px solid #7c8a972a;
+  color: #03038c;
+  border: 1px solid #03038c;
   border-radius: 4px;
 }
 
@@ -25,19 +32,25 @@
 }
 
 .textarea:focus,
-.booking__form input:focus,
-.booking__form select:focus {
+.booking_form input:focus,
+.booking_form select:focus {
   outline: none;
 }
 
+.booking_form .submit:hover {
+  background-color: #03038c;
+  color: aliceblue;
+  
+}
+
 @media only screen and (max-width: 768px) {
-  .booking__form {
+  .booking_form {
     width: 100%;
   }
 
-  .booking__form input,
+  .booking_form input,
   .textarea,
-  .booking__form select {
+  .booking_form select {
     font-size: 0.8rem;
   }
 }
